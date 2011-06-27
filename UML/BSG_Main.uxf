@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.3">
+  <zoom_level>6</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>120</y>
+      <w>126</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>BSG_Server
+Package::BSG.Server
+--
+BSG_Board_Server
+BSG_Character_Server
+BSG_Skill_Card_Server
+BSG_Loyalty_Server
+BSG_Crisis_Server
+BSG_Super_Crisis_Server
+BSG_Quorum_Card_Server
+BSG_Battlestar_Damage_Server
+BSG_Basestar_Damage_Server
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+Create servers</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>156</x>
+      <y>114</y>
+      <w>126</w>
+      <h>228</h>
+    </coordinates>
+    <panel_attributes>BSG_Board_Server
+Package::BSG_Server
+--
+Fuel_Resource
+Morale_Resource
+Food_Resource
+Population_Resource
+Jump_Prep_Track
+Boarding_Party_Track
+Space_Locations[]
+Colonial_One_Locations[]
+Battlestar_Locations[]
+Cylon_Locations[]
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+Track resources
+Track jump prep status
+Track boarding party status
+Track space locations
+Track ship/cylon locations
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>468</x>
+      <y>234</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>BSG_Population
+--
+Private int Max_Population
+Private int Current_Population
+--
+
+--
+Responsibilities
+Serve population
+Tell server of loss if population = 0
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>408</x>
+      <y>108</y>
+      <w>186</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>BSG_Resource
+Package::BSG.Board.Resource
+--
+Public void setResource(int i) throws Lose
+Public void incrimentResouce(int i) throws Lose
+Public int getResource();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>318</x>
+      <y>372</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>BSG_Fuel
+--
+Private int Max_Fuel
+Private int Current_Fuel
+--
+
+--
+Responsibilities
+Serve fuel
+Tell server of loss if fuel = 0
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>606</x>
+      <y>222</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>BSG_Morale
+--
+Private int Max_Morale
+Private int Current_Morale
+--
+
+--
+Responsibilities
+Serve morale
+Tell server of loss if morale = 0
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>312</x>
+      <y>222</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>BSG_Food
+--
+Private int Max_Food
+Private int Current_Food
+--
+
+--
+Responsibilities
+Serve food
+Tell server of loss if food = 0
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>264</x>
+      <y>150</y>
+      <w>66</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>54;72;18;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>264</x>
+      <y>138</y>
+      <w>246</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>234;96;18;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>264</x>
+      <y>126</y>
+      <w>354</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>342;102;18;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>264</x>
+      <y>162</y>
+      <w>66</w>
+      <h>222</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>54;210;18;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>318</x>
+      <y>144</y>
+      <w>102</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>18;78;90;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>420</x>
+      <y>144</y>
+      <w>54</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>18;228;42;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>480</x>
+      <y>144</y>
+      <w>66</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>54;90;18;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>552</x>
+      <y>144</y>
+      <w>108</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>96;78;18;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>108</x>
+      <y>120</y>
+      <w>60</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>48;18;18;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>276</x>
+      <y>492</y>
+      <w>198</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>BSG_Jump_Track
+Package::BSG.Board
+--
+Private int jumpLocation
+Private BSG_Population
+Private BSG_Destination_Card_Server
+Private BSG_Admiral
+--
+Public void jump()
+
+--
+Responsibilities
+Track jump preperation
+Decreas population if nessicary
+get destination cards and give them to the admiral</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>222</x>
+      <y>324</y>
+      <w>96</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>84;168;18;18</additional_attributes>
+  </element>
+</diagram>
